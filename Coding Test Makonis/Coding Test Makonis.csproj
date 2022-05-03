@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Coding_Test_Makonis</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Makonis.Common\Makonis.Common.csproj" />
+    <ProjectReference Include="..\Makonis.Services\Makonis.Services.csproj" />
+  </ItemGroup>
+
+</Project>

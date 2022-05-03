@@ -1,0 +1,39 @@
+﻿@model Makonis.Common.Models.User
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="Index">
+        <table>
+            <tr>
+                <td>First Name: </td>
+                <td>@Html.TextBoxFor(m => m.FirstName)</td>
+            </tr>
+            <tr>
+                <td>Last Name: </td>
+                <td>@Html.TextBoxFor(m => m.LastName)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Submit" /></td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                @if (!string.IsNullOrEmpty(ViewBag.Path))
+                {
+                    <td>FirstName and LastName saved to path @ViewBag.Path</td>
+                }
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
